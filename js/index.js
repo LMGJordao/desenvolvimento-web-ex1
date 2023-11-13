@@ -1,21 +1,34 @@
-document.addEventListener('DOMContentLoaded', () => {
-    let controller = new ScrollMagic.Controller({
-        globalSceneOptions: {
-            triggerHook: 'onLeave',
-            duration: "200%" // this works just fine with duration 0 as well
-            // However with large numbers (>20) of pinned sections display errors can occur so every section should be unpinned once it's covered by the next section.
-            // Normally 100% would work for this, but here 200% is used, as Panel 3 is shown for more than 100% of scrollheight due to the pause.
-        }
-    });
+"use strict";
+// Utility functions
+/**
+ * This value may change if you resize the window.
+ * @param {HTMLElement} element - Any `HTMLElement`, but `document.documentElement` is expected.
+ * @returns {number} The total scrollable depth.
+ */
+const getTotalScrollDepth = (element) => {
+    return element.scrollHeight - element.clientHeight;
+};
 
-    let slides = document.querySelectorAll("section.panel");
+/**
+ * This calculates the percentage of depth already scrolled.
+ * @param {HTMLElement} element - Any `HTMLElement`, but `document.documentElement` is expected.
+ * @param {number} totalElementDepth - The element's total scrollable depth (The element's total height minus its displayed height)
+ * @returns {number} A number in the range [0, 100].
+ */
+const getScrollProgress = (element, totalElementDepth) => {
+    return Math.round(element.scrollTop / totalElementDepth * 100);
+};
 
-    for (let i = 0; i < slides.length; i++) {
-        new ScrollMagic.Scene({
-            triggerElement: slides[i]
-            })
-            .setPin(slides[i], {pushFollowers: false})
-            .addIndicators()    //debug
-            .addTo(controller);
-    }
+// Global variables
+let totalScrollDepth = getTotalScrollDepth(document.documentElement);
+
+// User interaction
+window.addEventListener("resize", event => {
+    //A window resize causes this value to change
+    totalScrollDepth = getTotalScrollDepth(document.documentElement);
+});
+
+window.addEventListener("scroll", event => {
+    //Debug information
+    document.getElementById("debug").innerHTML = getScrollProgress(document.documentElement, totalScrollDepth);
 });

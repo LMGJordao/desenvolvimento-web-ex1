@@ -1,23 +1,57 @@
+/* DOCUMENT SETTINGS */
 * {
     margin: 0;
     padding: 0;
     border: 0;
+    scrollbar-width: none;          /* Hide Mozilla Firefox scrollbar */
 }
 
-.panel {
-    width: 100vw;
-    height: 100vh;
-    box-sizing: content-box;
+
+body {
+    height: 1000vh;                 /* Add scroll height */
+    -ms-overflow-style: none;       /* Hide IE and Edge scrollbar */
+    overflow-y: scroll;             /* Allow vertical scroll */
 }
 
-.red {
-    background-color: red;
+body::-webkit-scrollbar {           /* Hide Chrome, Safari and Opera scrollbar */
+    display: none;
 }
 
-.blue {
-    background-color: blue;
+#debug {                            /* Scroll progress indicator */
+    position: sticky;
+    top: 20px;
+    margin-left: 20px;
+    color: red;
 }
 
-.green {
-    background-color: green;
+/* STYLE */
+body {
+    background: radial-gradient(143.85% 143.85% at 50% 100%, #B22F6E 0%, #0F1C3E 66.67%, #050E24 100%);
+}
+
+.baseContainer {
+    position: fixed;
+    bottom: 0;
+    left: 50vw;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    width: 400px;
+    height: 761.6px;
+}
+
+.baseItem {
+    position: absolute;
+}
+
+#baseItem1 {
+    top: 0;
+}
+
+#baseItem2 {
+    bottom: 0;
+}
+
+#baseItem3 {
+    bottom: -30px;
 }
