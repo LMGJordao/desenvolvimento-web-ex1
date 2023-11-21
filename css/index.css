@@ -1,11 +1,19 @@
 /* DOCUMENT SETTINGS */
 * {
+    /* Variables */
+    --color-cold-white: #D4B0E6;
+    --color-magenta: #B22F6E;
+    --color-blue: #0702F9;
+    --color-dark-blue: #0F1C3E;
+    --color-darker-blue: #050E24;
+
     margin: 0;
     padding: 0;
     border: 0;
     scrollbar-width: none;          /* Hide Mozilla Firefox scrollbar */
+    font-family: 'Zen Tokyo Zoo', sans-serif;
+    font-size: 70px;
 }
-
 
 body {
     height: 1000vh;                 /* Add scroll height */
@@ -26,32 +34,56 @@ body::-webkit-scrollbar {           /* Hide Chrome, Safari and Opera scrollbar *
 
 /* STYLE */
 body {
-    background: radial-gradient(143.85% 143.85% at 50% 100%, #B22F6E 0%, #0F1C3E 66.67%, #050E24 100%);
+    background: radial-gradient(143.85% 143.85% at 50% 100%, var(--color-magenta) 0%, var(--color-dark-blue) 66.67%, var(--color-darker-blue) 100%);
 }
 
 .baseContainer {
     position: fixed;
     bottom: 0;
+    width: 90vw;
+    height: 90vh;
+    max-height: 720px;
+    max-width: 379px;
     left: 50vw;
     transform: translateX(-50%);
-    display: flex;
-    justify-content: center;
-    width: 400px;
-    height: 761.6px;
 }
 
-.baseItem {
-    position: absolute;
-}
-
-#baseItem1 {
+.text1Container {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
     top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
 }
 
-#baseItem2 {
-    bottom: 0;
+.text1Container h1 {
+    position: relative;
+    top: -560px;
+    color: var(--color-cold-white);
+    font-weight: normal;
+    text-shadow: 0px 0px 30px var(--color-blue), 0px 0px 10px var(--color-cold-white); 
 }
 
-#baseItem3 {
-    bottom: -30px;
+.linkContainer {
+    position: relative;
+    top: -555px;
+    display: flex;
+    gap: 16px;
+}
+
+.linkContainer svg {
+    display: block;
+    height: 30px;
+    width: 30px;
+}
+
+.linkContainer path {
+    fill: var(--color-cold-white)
+}
+
+.hide {
+    visibility: hidden;
 }

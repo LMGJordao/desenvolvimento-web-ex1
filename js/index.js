@@ -19,10 +19,22 @@ const getScrollProgress = (element, totalElementDepth) => {
     return Math.round(element.scrollTop / totalElementDepth * 100);
 };
 
+const debugScrollProgress = () => {
+    depthIndicator.innerHTML = getScrollProgress(document.documentElement, totalScrollDepth);
+};
+
 // Global variables
-let totalScrollDepth = getTotalScrollDepth(document.documentElement);
+const targetScrollElement = document.documentElement;
+let totalScrollDepth = getTotalScrollDepth(targetScrollElement);
+const depthIndicator = document.getElementById("debug");
+const scene1 = document.getElementById("scene1");
 
 // User interaction
+window.addEventListener("DOMContentLoaded", event => {
+    //Debug information
+    debugScrollProgress();
+})
+
 window.addEventListener("resize", event => {
     //A window resize causes this value to change
     totalScrollDepth = getTotalScrollDepth(document.documentElement);
@@ -30,5 +42,10 @@ window.addEventListener("resize", event => {
 
 window.addEventListener("scroll", event => {
     //Debug information
-    document.getElementById("debug").innerHTML = getScrollProgress(document.documentElement, totalScrollDepth);
+    debugScrollProgress();
+
+    const depth = getScrollProgress(targetScrollElement, totalScrollDepth);
+
+
+    scene1.classList.toggle("hide", !(depth >= 10 && depth <= 30));
 });

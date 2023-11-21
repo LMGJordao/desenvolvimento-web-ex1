@@ -2,61 +2,45 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <script src="./js/index.js" defer></script>
-    <link rel="stylesheet" href="css/index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap" rel="stylesheet">
 
-    <title>Document</title>
+  <!-- Avoid inline svg cluttering the HTML file -->
+  <script type="text/javascript" src="https://unpkg.com/external-svg-loader@latest/svg-loader.min.js" async></script>
+
+  <script src="./js/index.js" defer></script>
+  <link rel="stylesheet" href="css/index.css">
+
+  <title>lmgjordao</title>
 </head>
 
 <body>
-    <p id="debug"></p>
-    <div class="baseContainer">
-      <svg id="baseItem1" class="baseItem" width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M375.496 296C373.102 300.368 370.549 304.638 367.845 308.8H32.1549C29.4512 304.638 26.8982 300.368 24.5035 296H375.496ZM383.358 280C394.062 255.502 400 228.444 400 200C400 89.5431 310.457 0 200 0C89.5431 0 0 89.5431 0 200C0 228.444 5.9379 255.502 16.6417 280H383.358ZM54.8572 337.6C50.9638 333.495 47.2428 329.224 43.7056 324.8H356.294C352.757 329.224 349.036 333.495 345.143 337.6H54.8572ZM71.9023 353.6C77.3645 358.16 83.0736 362.435 89.0068 366.4H310.993C316.926 362.435 322.636 358.16 328.098 353.6H71.9023ZM200 400C170.718 400 142.906 393.707 117.842 382.4H282.158C257.094 393.707 229.282 400 200 400Z" fill="url(#paint0_linear_106_24)"/>
-        <defs>
-          <linearGradient id="paint0_linear_106_24" x1="267.2" y1="9.6" x2="219.2" y2="487.2" gradientUnits="userSpaceOnUse">
-            <stop stop-color="#FF9900"/>
-            <stop offset="0.456722" stop-color="#E81AAE" stop-opacity="0.67"/>
-            <stop offset="1" stop-color="#E613B8" stop-opacity="0.78"/>
-          </linearGradient>
-        </defs>
-      </svg>
-      <svg id="baseItem2" class="baseItem" width="400" height="396" viewBox="0 0 400 396" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M89.0326 0.399994H310.938L400 395.6H0L89.0326 0.399994Z" fill="#091022"/>
-      </svg>
-      <svg id="baseItem3" class="baseItem" width="86" height="456" viewBox="0 0 86 456" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <g filter="url(#filter0_ddd_121_21)">
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M36.3657 54.4L36.7643 30.4H48.5797L49.0182 54.4H36.3657ZM35.967 78.4L34.6383 158.4H50.9183L49.4567 78.4H35.967ZM31.9807 318.4L33.9739 198.4H51.6491L53.8416 318.4H31.9807ZM31.0506 374.4L30.2002 425.6H55.8002L54.8647 374.4H31.0506Z" fill="#D4B0E6"/>
-        </g>
-        <defs>
-          <filter id="filter0_ddd_121_21" x="0.200195" y="0.399994" width="85.6001" height="455.2" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-            <feOffset/>
-            <feGaussianBlur stdDeviation="15"/>
-            <feComposite in2="hardAlpha" operator="out"/>
-            <feColorMatrix type="matrix" values="0 0 0 0 0.503994 0 0 0 0 0.265139 0 0 0 0 0.691667 0 0 0 1 0"/>
-            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_121_21"/>
-            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-            <feOffset/>
-            <feGaussianBlur stdDeviation="2.5"/>
-            <feComposite in2="hardAlpha" operator="out"/>
-            <feColorMatrix type="matrix" values="0 0 0 0 0.793474 0 0 0 0 0.684028 0 0 0 0 0.820833 0 0 0 0.75 0"/>
-            <feBlend mode="normal" in2="effect1_dropShadow_121_21" result="effect2_dropShadow_121_21"/>
-            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-            <feOffset/>
-            <feGaussianBlur stdDeviation="10"/>
-            <feComposite in2="hardAlpha" operator="out"/>
-            <feColorMatrix type="matrix" values="0 0 0 0 0.21 0 0 0 0 0.7646 0 0 0 0 0.8 0 0 0 0.25 0"/>
-            <feBlend mode="normal" in2="effect2_dropShadow_121_21" result="effect3_dropShadow_121_21"/>
-            <feBlend mode="normal" in="SourceGraphic" in2="effect3_dropShadow_121_21" result="shape"/>
-          </filter>
-        </defs>
-      </svg>
+  <p id="debug"></p>
+  <div class="baseContainer">
+    <svg data-src="resources/objects/base.svg"></svg>
+  </div>
+  <div class="text1Container hide" id="scene1">
+    <h1>
+      lmgjordao
+    </h1>
+    <div class="linkContainer">
+      <a href="https://github.com/LMGJordao">
+        <svg data-src="resources/icons/github.svg"></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/lmgjordao/">
+        <svg data-src="resources/icons/linkedin.svg"></svg>
+      </a>
     </div>
+  </div>
+  <div class="citySkylineContainer hide"></div>
+  <div class="treeContainer">
+
+  </div>
+  <div class="text2Container hide"></div>
 </body>
 
 </html>
