@@ -46,32 +46,27 @@ body {
 
 .baseContainer svg {
     display: block;
-    max-width: 100vw;
-    max-height: 100vh;
-}
-
-.text1Container {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
+    height: 720px;
+    width: 379px;
+    max-width: 95vw;
+    max-height: 95vh;
 }
 
 .text1Container h1 {
-    position: relative;
-    top: -560px;
+    position: fixed;
+    left: 50vw;
+    transform: translateX(-50%);
+    bottom: min(70vh, 560px);
     color: var(--color-cold-white);
     font-weight: normal;
     text-shadow: 0px 0px 30px var(--color-blue), 0px 0px 10px var(--color-cold-white); 
 }
 
 .linkContainer {
-    position: relative;
-    top: -555px;
+    position: fixed;
+    left: 50vw;
+    transform: translateX(-50%);
+    bottom: min(65vh, 530px);
     display: flex;
     gap: 16px;
 }
