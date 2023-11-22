@@ -40,12 +40,14 @@ body {
 .baseContainer {
     position: fixed;
     bottom: 0;
-    width: 90vw;
-    height: 90vh;
-    max-height: 720px;
-    max-width: 379px;
     left: 50vw;
     transform: translateX(-50%);
+}
+
+.baseContainer svg {
+    display: block;
+    max-width: 100vw;
+    max-height: 100vh;
 }
 
 .text1Container {
