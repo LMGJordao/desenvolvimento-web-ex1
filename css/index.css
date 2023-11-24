@@ -10,31 +10,37 @@
     margin: 0;
     padding: 0;
     border: 0;
-    scrollbar-width: none;          /* Hide Mozilla Firefox scrollbar */
-    font-family: 'Zen Tokyo Zoo', sans-serif;
-    font-size: 70px;
+    scrollbar-width: none;
+    /* Hide Mozilla Firefox scrollbar */
+
 }
 
 body {
-    height: 1000vh;                 /* Add scroll height */
-    -ms-overflow-style: none;       /* Hide IE and Edge scrollbar */
-    overflow-y: scroll;             /* Allow vertical scroll */
+    height: 1000vh;
+    /* Add scroll height */
+    -ms-overflow-style: none;
+    /* Hide IE and Edge scrollbar */
+    overflow-y: scroll;
+    /* Allow vertical scroll */
 }
 
-body::-webkit-scrollbar {           /* Hide Chrome, Safari and Opera scrollbar */
+body::-webkit-scrollbar {
+    /* Hide Chrome, Safari and Opera scrollbar */
     display: none;
-}
-
-#debug {                            /* Scroll progress indicator */
-    position: sticky;
-    top: 20px;
-    margin-left: 20px;
-    color: red;
 }
 
 /* STYLE */
 body {
     background: radial-gradient(143.85% 143.85% at 50% 100%, var(--color-magenta) 0%, var(--color-dark-blue) 66.67%, var(--color-darker-blue) 100%);
+}
+
+.fade {
+    transition: opacity ease 1s;
+}
+
+.hide {
+    opacity: 0;
+    visibility: hidden;
 }
 
 .baseContainer {
@@ -47,7 +53,7 @@ body {
 .baseContainer svg {
     display: block;
     height: 720px;
-    width: 379px;
+    width: 452px;
     max-width: 95vw;
     max-height: 95vh;
 }
@@ -58,8 +64,10 @@ body {
     transform: translateX(-50%);
     bottom: min(70vh, 560px);
     color: var(--color-cold-white);
+    font-family: 'Zen Tokyo Zoo', sans-serif;
+    font-size: 70px;
     font-weight: normal;
-    text-shadow: 0px 0px 30px var(--color-blue), 0px 0px 10px var(--color-cold-white); 
+    text-shadow: 0px 0px 30px var(--color-blue), 0px 0px 10px var(--color-cold-white);
 }
 
 .linkContainer {
@@ -81,6 +89,17 @@ body {
     fill: var(--color-cold-white)
 }
 
-.hide {
-    visibility: hidden;
+.text2Container p {
+    position: fixed;
+    left: 50vw;
+    width: min(90vw, 379px);
+    transform: translateX(-50%);
+    bottom: 320px;
+    color: var(--color-cold-white);
+    font-family: Helvetica, sans-serif;
+    font-size: 25px;
+    font-weight: normal;
+    font-style: italic;
+    text-shadow: 0px 0px 30px var(--color-blue), 0px 0px 10px var(--color-cold-white);
+    text-align: center;
 }
